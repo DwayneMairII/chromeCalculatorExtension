@@ -1,0 +1,15 @@
+{
+    "name" : "Calculator",
+    "version" : "1.0",
+    "manifest_version" : 3,
+    "description" : "",
+    "action" : {
+        "default_popup" : "start.html"
+    },
+    "content_scripts" : [
+        {
+            "js" : ["content.js"],
+            "matches" : ["<all_urls>"]
+        }
+    ]
+}
