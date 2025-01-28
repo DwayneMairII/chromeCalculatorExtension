@@ -1,48 +1,49 @@
 <!DOCTYPE html>
-    <html>
-        <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>Calculator</title>
-            <link rel="stylesheet" href="style.css">
-            <script src="content.js"></script>
-        </head>
-        <body>
-            <div class="container">
-                <div class="calculator">
-                    <form>
-                        <div class="display">
-                            <input type="text" name="display" readonly>
-                        </div>
-                        <div>
-                            <input type="button" value="7" onclick="appendToDisplay('7')">
-                            <input type="button" value="8" onclick="appendToDisplay('8')">
-                            <input type="button" value="9" onclick="appendToDisplay('9')">
-                            <input type="button" value="DEL" onclick="deleteLastCharacter()">
-                            <input type="button" value="AC" onclick="clearDisplay()">
-                        </div>
-                        <div>
-                            <input type="button" value="4" onclick="appendToDisplay('4')">
-                            <input type="button" value="5" onclick="appendToDisplay('5')">
-                            <input type="button" value="6" onclick="appendToDisplay('6')">
-                            <input type="button" value="×" onclick="appendToDisplay('×')">
-                            <input type="button" value="÷" onclick="appendToDisplay('÷')">
-                        </div>
-                        <div>
-                            <input type="button" value="1" onclick="appendToDisplay('1')">
-                            <input type="button" value="2" onclick="appendToDisplay('2')">
-                            <input type="button" value="3" onclick="appendToDisplay('3')">
-                            <input type="button" value="+" onclick="appendToDisplay('+')">
-                            <input type="button" value="-" onclick="appendToDisplay('-')">
-                        </div>
-                        <div>
-                            <input type="button" value="0" onclick="appendToDisplay('0')">
-                            <input type="button" value="." onclick="appendToDisplay('.')">
-                            <input type="button" value="EXP" onclick="appendToDisplay('.')">
-                            <input type="button" value="Ans" onclick="appendToDisplay('Ans')">
-                            <input type="button" value="=" onclick="calculateResult()">
-                        </div>
-                    </form>
-                </div>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="content.js" defer></script> <!-- Ensure the script is loaded after the DOM -->
+    </head>
+    <body>
+        <div class="container">
+            <div class="calculator">
+                <form>
+                    <div class="display">
+                        <input type="text" name="display" readonly>
+                    </div>
+                    <div>
+                        <input type="button" value="7" class="button" data-value="7">
+                        <input type="button" value="8" class="button" data-value="8">
+                        <input type="button" value="9" class="button" data-value="9">
+                        <input type="button" value="DEL" class="button" data-action="deleteLastCharacter">
+                        <input type="button" value="AC" class="button" data-action="clearDisplay">
+                    </div>
+                    <div>
+                        <input type="button" value="4" class="button" data-value="4">
+                        <input type="button" value="5" class="button" data-value="5">
+                        <input type="button" value="6" class="button" data-value="6">
+                        <input type="button" value="×" class="button" data-value="×">
+                        <input type="button" value="÷" class="button" data-value="÷">
+                    </div>
+                    <div>
+                        <input type="button" value="1" class="button" data-value="1">
+                        <input type="button" value="2" class="button" data-value="2">
+                        <input type="button" value="3" class="button" data-value="3">
+                        <input type="button" value="+" class="button" data-value="+">
+                        <input type="button" value="-" class="button" data-value="-">
+                    </div>
+                    <div>
+                        <input type="button" value="0" class="button" data-value="0">
+                        <input type="button" value="." class="button" data-value=".">
+                        <input type="button" value="EXP" class="button" data-value="EXP">
+                        <input type="button" value="Ans" class="button" data-value="Ans">
+                        <input type="button" value="=" class="button" data-action="calculateResult">
+                    </div>
+                </form>
             </div>
-        </body>
-    </html>
+        </div>
+    </body>
+</html>
